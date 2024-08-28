@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --clr: #AD8CFF;
+    --ff: 'Oswald';
+    --ff1: 'big-caslon-fb';
+
+}
+
+header {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1.3px black;
+    padding-bottom: 25px;
+}
+
+#h1 p {
+    border-bottom: solid 1.3px black;
+    font-family: var(--ff1);
+    font-size: 2vw;
+    white-space: nowrap;
+}
+#h2 {
+    margin-top: 0.5vw;
+    line-height: 1.5vw;
+}
+
+#h2 ul li {
+    font-family: var(--ff);
+    font-size: 1.2vw;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#h2 ul li:hover {
+    transform: translateX(20px);
+}
+#h2 ul li a{
+    color: black;
+}
+#h3 p {
+    color: var(--clr);
+    font-family: var(--ff);
+    font-size: 5.5vw;
+    font-weight: bolder;
+    white-space: nowrap;
+    margin-top: -1.2vw;
+}
+
+#h4 p {
+    font-family: var(--ff1);
+    font-size: 3.6vw;
+    position: absolute;
+    white-space: nowrap;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -0.5vw;
+}
+
+
+#h5 p {
+    border-bottom: solid 1.3px black;
+    font-family: var(--ff1);
+    font-size: 2vw;
+    white-space: nowrap;
+}
+#h4-h5{
+    position: relative;
+}
+
+#h6 p {
+    font-family: var(--ff);
+    font-size: 1.2vw;
+    white-space: nowrap;
+    line-height: 1.5vw;
+}
+#h6 {
+    margin-top: 0.5vw;
+}
+
+
+/* CSS pour la section projets */
+#projets {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h4 {
+    font-family: var(--ff1);
+    font-size: 1.4vw;
+    font-weight: lighter;
+}
+
+#divprojets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.pr {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+}
+
+.img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.pr .img img.active {
+    opacity: 1;
+
+}
+
+.btn {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    z-index: 3;
+    cursor: pointer;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+span {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+}
+
+#prev {
+    left: 5px;
+    cursor: pointer;
+}
+
+#next {
+    right: 5px;
+    cursor: pointer;
+}
+
+#open {
+    cursor: pointer;
+}
+
+#close {
+    display: none;
+    cursor: pointer;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.img.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 1000;
+}
+
+.img.fullscreen img {
+    max-height: 100vh;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.titre-projet {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.titre-projet p {
+    font-family: var(--ff1);
+    white-space: nowrap;
+    font-size: 1.7vw;
+    margin-top: 2vh;
+}
+
+.titre-projet h5 {
+    font-family: var(--ff);
+    white-space: nowrap;
+    font-size: 1.3vw;
+    margin-bottom: 2vh;
+}
+
+#pr1 {
+    color: #FF0000;
+}
+
+#pr1 .btn {
+    color: #FF0000;
+}
+
+#pr1 span {
+    color: #FF0000;
+}
+
+#pr2 {
+    color: #1BE41B;
+}
+
+#pr2 .btn {
+    color: #1BE41B;
+}
+
+#pr3 {
+    color: #FFDD00;
+}
+
+#pr3 .btn {
+    color: #FFDD00;
+}
+
+#pr4 {
+    color: #FF4D00;
+}
+
+#pr4 .btn {
+    color: #FF4D00;
+}
+
+#pr5 {
+    color: #EA5153;
+}
+
+#pr5 .btn {
+    color: #EA5153;
+}
+
+#pr6 {
+    color: #FF0000;
+}
+
+#pr6 .btn {
+    color: #FF0000;
+}
+
+#pr7 {
+    color: #A600FF;
+}
+
+#pr7 .btn {
+    color: #A600FF;
+}
+
+#pr8 {
+    color: #FFDD00;
+}
+
+#pr8 .btn {
+    color: #FFDD00;
+}
+
+#pr9 {
+    color: #2340FF;
+}
+
+#pr9 .btn {
+    color: #2340FF;
+}
+
+#pr10 {
+    color: #FF00C3;
+}
+
+#pr10 .btn {
+    color: #FF00C3;
+}
+
+#pr11 {
+    color: #860BC5;
+}
+
+#pr11 .btn {
+    color: #860BC5;
+}
+
+#pr12 {
+    color: #ABD414;
+}
+
+#pr12 .btn {
+    color: #ABD414;
+}
+#go-up{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+footer p{
+    font-family: var(--ff);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 1.4vw;
+    font-weight: 200;
+    font-style: normal;
+}
