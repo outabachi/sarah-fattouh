@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         openButton.addEventListener('click', (e) => {
-            const parentProject = e.target.closest('.img'); 
+            const parentProject = e.target.closest('.pr').querySelector('.img'); 
             const body = document.body;
             const btn = document.querySelector('.btn');
             
